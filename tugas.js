@@ -8,7 +8,7 @@ function printTriangle (num){
     }
     return console.log(str)
   }
-// printTriangle(10)
+printTriangle(10)
 function printGanjilGenap (angka){
       for (let a = 1;a<=angka;a++){
           if (a%2==0){
@@ -16,7 +16,7 @@ function printGanjilGenap (angka){
           } else {console.log (a+" merupakan bilangan ganjil")}
       }
   }
-// printGanjilGenap(10)
+printGanjilGenap(10)
   let name = "Achmad Rizky Revanda"
   var email = "rizkyrevanda@gmail.com"
   const addres = {
