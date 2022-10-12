@@ -1,6 +1,6 @@
 // nomor 2
 
-// function searchName (u1,callback) {
+// function searchName (ktcari,u1,callback) {
 //     var jeneng = ["Abigail", "Alexandra", "Alison",
 // "Amanda", "Angela", "Bella",
 // "Carol", "Caroline", "Carolyn",
@@ -22,30 +22,63 @@
 //         console.log(str2[d])
 //     }
 // }
-// searchName( 2, callback)
+// function searchName (ktcari,u1,callback) {
+//     var jeneng = ["Abigail", "Alexandra", "Alison",
+//     "Amanda", "Angela", "Bella",
+//     "Carol", "Caroline", "Carolyn",
+//     "Deirdre", "Diana", "Elizabeth",
+//     "Ella", "Faith", "Olivia", "Penelope"];
+//     var result1 = jeneng.filter((hasil => hasil.toLowerCase().includes(ktcari)))
+//     callback(result1,u1)
+// } 
+// function callback(result1,u1) {
+//     for (a = 1; a <= u1;a++) {
+//         console.log(result1[a])
+//     }
+// }
+// searchName( "an",2, callback)
 
 // nomor 3
-
-function SeleksiNilai (nilaiAwal,nilaiAkhir,dataArray) {
+function SeleksiNilai (nilaiAwal,nilaiAkhir,dataArray,) {
     z = dataArray.length
-    if (nilaiAwal>nilaiAkhir){
-        console.log("nilai akhir harus lebih besar dari nilai awal")
-    } else if(z<5){console.log("Jumlah angka dalam dataArray harus lebih dari 5")
-} else {}
-    ns(nilaiAwal,nilaiAkhir,dataArray,z)
+    nilaiAwal>nilaiAkhir ? console.log("nilai akhir harus lebih besar dari nilai awal") :
+    z<5 ? console.log("Jumlah angka dalam dataArray harus lebih dari 5") : perhitungan()
+    function perhitungan() {
+        data = dataArray.filter((angka => nilaiAwal < angka && angka < nilaiAkhir));
+        data.length !== 0 ? console.log(data) : console.log("Nilai tidak ditemukan")
+    //     data = ""
+    //     for (y = 0;y<=z-1;y++) {
+    //         nilaiAwal < dataArray[y] && dataArray[y] < nilaiAkhir ? data += dataArray[y]+" " : console.log("tidak termasuk")
+    // }
+    // console.log(data)
+    // callback(nilaiAwal,nilaiAkhir,dataArray,z)
 }
-function ns (nilaiAwal,nilaiAkhir,dataArray,z){
-    let str = ""
-    for (y = 0; y<=z-1;y++){
-        if (dataArray[y]<nilaiAwal) {
-        } else if (dataArray[y]>nilaiAkhir) {
-        } else {str += dataArray[y] +" " }
-    }
-    l = str.length
-    if (l === 0){console.log("Nilai tidak ditemukan")}
-    else {console.log(str)}
+// function 
+//     for (y = 0;y<=z-1;y++) {
+//         nilaiAwal < dataArray ? console.log(dataArray[y]) : 
+//         console.log("gak ada")
+// }
 }
-SeleksiNilai(5,20,[2, 25, 4, 14, 17, 3, 15],ns)
+// function SeleksiNilai (nilaiAwal,nilaiAkhir,dataArray) {
+//     z = dataArray.length
+//     if (nilaiAwal>nilaiAkhir){
+//         console.log("nilai akhir harus lebih besar dari nilai awal")
+//     } else if(z<5){console.log("Jumlah angka dalam dataArray harus lebih dari 5")
+// } else {}
+//     ns(nilaiAwal,nilaiAkhir,dataArray,z)
+// }
+// function ns (nilaiAwal,nilaiAkhir,dataArray,z){
+//     let str = ""
+//     for (y = 0; y<=z-1;y++){
+//         if (dataArray[y]<nilaiAwal) {
+//         } else if (dataArray[y]>nilaiAkhir) {
+//         } else {str += dataArray[y] +" " }
+//     }
+//     l = str.length
+//     if (l === 0){console.log("Nilai tidak ditemukan")}
+//     else {console.log(str)}
+// }
+SeleksiNilai(1,20,[2, 25, 4, 14, 17, 3, 15])
 
 // nomor 1
 
