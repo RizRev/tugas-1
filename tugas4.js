@@ -29,12 +29,16 @@ const cekBulan = (str2) => {
         return str1 === str2
     })
     if (cek) {
-        console.log("ada bulan")
-    } else {console.log("tidak ada bulan")}
+        resolve(str2 + " adalah bulan")
+    } else {reject("tidak ada bulan")}
     })
     // console.log(str2)
 }
 cekBulan("Mei")
+    .then(response => console.log(response))
+    .catch(response => console.log(response))
+
+
 // const getMonth = (callback) => {
 //     setTimeout(() => {
 //         let error = false
