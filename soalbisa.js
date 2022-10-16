@@ -38,6 +38,5 @@ function callback (u1,str2){
     for (d = 0;d<=u1-1;d++){
         console.log(str2[d])
     }
-    // console.log("ini apa")
 }
 searchName( 2, callback)

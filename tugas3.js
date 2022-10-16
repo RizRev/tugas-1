@@ -22,21 +22,21 @@
 //         console.log(str2[d])
 //     }
 // }
-// function searchName (ktcari,u1,callback) {
-//     var jeneng = ["Abigail", "Alexandra", "Alison",
-//     "Amanda", "Angela", "Bella",
-//     "Carol", "Caroline", "Carolyn",
-//     "Deirdre", "Diana", "Elizabeth",
-//     "Ella", "Faith", "Olivia", "Penelope"];
-//     var result1 = jeneng.filter((hasil => hasil.toLowerCase().includes(ktcari)))
-//     callback(result1,u1)
-// } 
-// function callback(result1,u1) {
-//     for (a = 1; a <= u1;a++) {
-//         console.log(result1[a])
-//     }
-// }
-// searchName( "an",2, callback)
+function searchName (ktcari,u1,callback) {
+    var jeneng = ["Abigail", "Alexandra", "Alison",
+    "Amanda", "Angela", "Bella",
+    "Carol", "Caroline", "Carolyn",
+    "Deirdre", "Diana", "Elizabeth",
+    "Ella", "Faith", "Olivia", "Penelope"];
+    var result1 = jeneng.filter((hasil => hasil.toLowerCase().includes(ktcari)))
+    callback(result1,u1)
+} 
+function callback(result1,u1) {
+    for (a = 1; a <= u1;a++) {
+        console.log(result1[a])
+    }
+}
+searchName( "an",2, callback)
 
 // nomor 3
 function SeleksiNilai (nilaiAwal,nilaiAkhir,dataArray,) {
@@ -46,18 +46,7 @@ function SeleksiNilai (nilaiAwal,nilaiAkhir,dataArray,) {
     function perhitungan() {
         data = dataArray.filter((angka => nilaiAwal < angka && angka < nilaiAkhir));
         data.length !== 0 ? console.log(data) : console.log("Nilai tidak ditemukan")
-    //     data = ""
-    //     for (y = 0;y<=z-1;y++) {
-    //         nilaiAwal < dataArray[y] && dataArray[y] < nilaiAkhir ? data += dataArray[y]+" " : console.log("tidak termasuk")
-    // }
-    // console.log(data)
-    // callback(nilaiAwal,nilaiAkhir,dataArray,z)
 }
-// function 
-//     for (y = 0;y<=z-1;y++) {
-//         nilaiAwal < dataArray ? console.log(dataArray[y]) : 
-//         console.log("gak ada")
-// }
 }
 // function SeleksiNilai (nilaiAwal,nilaiAkhir,dataArray) {
 //     z = dataArray.length
@@ -160,3 +149,15 @@ SeleksiNilai(1,20,[2, 25, 4, 14, 17, 3, 15])
 //   }
 // console.log(ages.findIndex(checkAge))
 // mencari nilai dari data pertama yang sesuai dengan ketentuan
+
+// tugas 4
+let datanama = [] 
+var fetch = require(`cross-fetch`);
+fetch('https://jsonplaceholder.typicode.com/users')
+.then (result => result.json())
+.then (result => console.log(result.map(item => item.name)))
+.then (result => {result.forEach(element => {datanama = [...datanama,[element.name]]})
+    console.log(datanama)
+})
+.then (result => result.forEach(element => console.log(element.name)))
+setTimeout(() => {console.log(datanama)},5000) 
